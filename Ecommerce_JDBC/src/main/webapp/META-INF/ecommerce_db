@@ -1,0 +1,18 @@
+create database ecommerce;
+
+use ecommerce;
+
+desc eproduct;
+
+create table eproduct(
+ID int primary key auto_increment, 
+name varchar(100), 
+price decimal(10,2), 
+date_added timestamp default now());
+
+insert into eproduct(name,price) values('HP Laptop ABC', 12000.00);
+insert into eproduct(name, price) values('Acer Laptop ABC', 14000);
+insert into eproduct(name, price) values('Lenovo Laptop ABC', 12000);
+insert into eproduct (name, price, date_added) values ('New Product', 17800.00, now());
+
+select * from eproduct;
